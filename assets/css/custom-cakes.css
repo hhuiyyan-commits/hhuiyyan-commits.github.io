@@ -1,0 +1,74 @@
+.photo .photo-text{
+    position: relative;
+    z-index: 1001;
+}
+
+.photo .photo-text h2{
+    font-size: 3.5rem;
+    text-align: center;
+    color:#e4dcb1;
+    font-family: 'Forum', cursive;
+    padding-top: 5rem;
+}
+
+.photo .photo-text p{
+    font-size: 2rem;
+    text-align: center;
+    color:#000000;
+}
+
+.photo .photo-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 80px 100px;
+}
+
+.photo .photo-container .photo-box{
+    overflow: hidden;
+    box-shadow: 0 1rem 2rem rgba(0,0,0,.1);
+    border: 0.5rem solid #e4dcb1;
+    border-radius: .5rem;
+    flex: 1 1 30rem;
+    height: 25rem;
+    position: relative;
+}
+
+.photo .photo-container .photo-box img{
+    height: 100%;
+    width: 100%;
+    object-fit:cover;
+}
+
+.photo .photo-container .photo-box .photo-content{
+    position: absolute;
+    bottom: 0;
+    left:0;
+    padding: 1rem;
+}
+
+.photo .photo-container .photo-box .photo-content h3{
+    font-size: 1.7rem;
+    font-weight: 800;
+    color: #fff;
+    text-shadow: 1px 1px #000000;
+}
+
+.photo .photo-container .photo-box .photo-content p{
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #fff;
+    text-shadow: 1px 1px #000000;
+}
+
+@media (max-width: 992px) {
+  .photo-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .photo-container {
+    grid-template-columns: 1fr;
+  }
+}
